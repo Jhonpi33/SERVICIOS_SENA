@@ -1,0 +1,67 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Sora:wght@500;600;700&family=Inter:wght@400;500;600&display=swap');
+
+:root {
+  /* color */
+  --green-700: #1F5C29;
+  --green-600: #2F8F3B;
+  --green-500: #39A900;
+  --green-100: #E7F5E8;
+  --ink: #16241B;
+  --ink-muted: #5B6B5F;
+  --paper: #F6F8F4;
+  --card-border: #E1E6DD;
+  --white: #FFFFFF;
+
+  /* type */
+  --font-display: 'Sora', system-ui, sans-serif;
+  --font-body: 'Inter', system-ui, sans-serif;
+}
+
+body {
+  background: var(--paper);
+  font-family: var(--font-body);
+  color: var(--ink);
+}
+
+h1, h2, h3, h4 {
+  font-family: var(--font-display);
+  color: var(--ink);
+  margin: 0;
+}
+
+/* Etiqueta pequeña usada como encabezado de sección (sin mayúsculas sostenidas) */
+.section-label {
+  font-family: var(--font-display);
+  font-size: 15px;
+  font-weight: 600;
+  color: var(--green-700);
+  margin: 0 0 12px;
+}
+
+/* Botón / enlace con acento institucional */
+.pill-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 10px 18px;
+  border-radius: 999px;
+  border: 1.5px solid var(--green-600);
+  color: var(--green-700);
+  font-family: var(--font-body);
+  font-weight: 600;
+  font-size: 14px;
+  text-decoration: none;
+  background: transparent;
+  transition: background 0.18s ease, color 0.18s ease;
+}
+.pill-link:hover {
+  background: var(--green-600);
+  color: var(--white);
+}
+
+/* Scrollbar sutil, opcional */
+::selection {
+  background: var(--green-100);
+  color: var(--green-700);
+}
