@@ -2,7 +2,7 @@
   <q-page class="about-page">
 
     <section class="about-block">
-      <h2 class="section-label">Acerca del centro</h2>
+      <h2 class="section-label" id="Titulo">Acerca del centro</h2>
       <div class="center-header">
         <img src="/images/logo-sena.png" alt="Logo SENA" class="center-logo" />
         <div>
@@ -45,13 +45,12 @@
 </template>
 
 <script setup>
-// TODO: reemplaza estos datos por los integrantes reales del equipo
 const equipo = [
   {
-    nombre: 'Nombre Apellido',
-    rol: 'Desarrollador Frontend',
-    foto: 'https://ui-avatars.com/api/?name=Nombre+Apellido&background=39A900&color=fff&size=256',
-    github: 'https://github.com/usuario'
+    nombre: 'Jhon Alexander',
+    rol: 'Desarrollador Full Stack',
+    foto: '/public/images/Perfil_Jhon_Pimiento.png',
+    github: 'https://github.com/Jhonpi33'
   }
 ]
 </script>
@@ -76,8 +75,8 @@ const equipo = [
 }
 
 .center-logo {
-  width: 56px;
-  height: 56px;
+  width: 150px;
+  height: 150px;
   object-fit: contain;
   border-radius: 8px;
   border: 1px solid var(--card-border);
@@ -86,20 +85,20 @@ const equipo = [
 }
 
 .center-name {
-  font-size: 22px;
+  font-size: 25px;
   font-weight: 700;
   letter-spacing: -0.3px;
 }
 
 .center-sub {
-  font-size: 14px;
+  font-size: 20px;
   color: var(--green-700);
   font-weight: 600;
   margin-top: 2px;
 }
 
 .center-description {
-  font-size: 16.5px;
+  font-size: 18px;
   line-height: 1.75;
   color: var(--ink);
   margin: 0;
@@ -121,8 +120,8 @@ const equipo = [
 }
 
 .team-photo {
-  width: 76px;
-  height: 76px;
+  width: 120px;
+  height: 120px;
   border-radius: 50%;
   object-fit: cover;
   border: 3px solid var(--green-100);
@@ -132,12 +131,15 @@ const equipo = [
 .team-name {
   font-family: var(--font-display);
   font-weight: 600;
-  font-size: 15px;
+  font-size: 25px;
 }
 
 .team-role {
-  font-size: 13px;
+  font-size: 15px;
   color: var(--ink-muted);
   margin: 2px 0 14px;
+}
+#Titulo{
+  font-size: 40px;
 }
 </style>

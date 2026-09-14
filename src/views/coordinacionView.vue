@@ -2,13 +2,18 @@
   <ServiceCard
     title="Coordinación Académica"
     banner="/images/fachada-coordinacion.jpg"
-    description="Apoyamos el trámite de novedades de los aprendices: retiros, deserción y aplazamientos correspondientes a la formación titulada del SENA. También gestionamos la programación de los instructores para la formación y la logística de los ambientes, garantizando que se encuentren en óptimas condiciones."
+    description="La coordinación apoya la gestión y trámite de novedades de los aprendices durante su proceso de formación.
+Se encarga de gestionar retiros, deserciones y aplazamientos de la formación titulada del SENA.
+También coordina la programación y asignación de instructores para las diferentes actividades de formación.
+Gestiona la logística y disponibilidad de los ambientes de aprendizaje del centro.
+Su objetivo es garantizar una adecuada organización y funcionamiento de los procesos de formación.
+"
     :horarios="[
       { dia: 'Lunes a viernes', horario: '7:30 a.m. – 12:00 p.m.' }
     ]"
-    :telefonos="['No disponible']"
+    :telefonos="['+57 3166783027']"
     :encargado="{
-      foto: 'https://ui-avatars.com/api/?name=Luis+Carlos+Reina&background=39A900&color=fff&size=256',
+      foto: '/public/images/perfil-coordinacion.png',
       nombre: 'Luis Carlos Reina',
       cargo: 'Coordinador Académico',
       correo: 'lreinas@sena.edu.com'

@@ -18,7 +18,18 @@
             </div>
 
             <!-- Columna lateral: horarios, contacto, encargado -->
+            
             <aside class="side-col">
+                
+                <div class="staff-card">
+                    <img :src="encargado.foto" :alt="encargado.nombre" class="staff-photo" />
+                    <div class="staff-name">{{ encargado.nombre }}</div>
+                    <div class="staff-role">{{ encargado.cargo }}</div>
+                    <a :href="'mailto:' + encargado.correo" class="pill-link staff-email">
+                        <q-icon name="mail" size="16px" />
+                        {{ encargado.correo }}
+                    </a>
+                </div>
 
                 <div class="info-block">
                     <h3 class="info-block-title">
@@ -32,7 +43,7 @@
                         </li>
                     </ul>
                 </div>
-
+                
                 <div class="info-block">
                     <h3 class="info-block-title">
                         <q-icon name="call" size="18px" />
@@ -41,15 +52,9 @@
                     <p v-for="(t, i) in telefonos" :key="i" class="phone-line">{{ t }}</p>
                 </div>
 
-                <div class="staff-card">
-                    <img :src="encargado.foto" :alt="encargado.nombre" class="staff-photo" />
-                    <div class="staff-name">{{ encargado.nombre }}</div>
-                    <div class="staff-role">{{ encargado.cargo }}</div>
-                    <a :href="'mailto:' + encargado.correo" class="pill-link staff-email">
-                        <q-icon name="mail" size="16px" />
-                        {{ encargado.correo }}
-                    </a>
-                </div>
+                
+
+                
 
             </aside>
         </div>
@@ -92,7 +97,7 @@ defineProps({
 }
 
 .hero-title {
-    font-size: clamp(30px, 4vw, 44px);
+    font-size: clamp(55px, 4vw, 44px);
     font-weight: 700;
     color: var(--white);
     letter-spacing: -0.5px;
@@ -122,7 +127,7 @@ defineProps({
 
 /* ---------- Columna principal ---------- */
 .description {
-    font-size: 17px;
+    font-size: 22px;
     line-height: 1.75;
     color: var(--ink);
     max-width: 62ch;
@@ -149,7 +154,7 @@ defineProps({
     align-items: center;
     gap: 8px;
     font-family: var(--font-display);
-    font-size: 15px;
+    font-size: 20px;
     font-weight: 600;
     color: var(--ink);
     margin: 0 0 12px;
@@ -184,17 +189,17 @@ defineProps({
 
 .day {
     font-weight: 600;
-    font-size: 14px;
+    font-size: 19px;
     color: var(--ink);
 }
 
 .time {
-    font-size: 13.5px;
+    font-size: 18px;
     color: var(--ink-muted);
 }
 
 .phone-line {
-    font-size: 14.5px;
+    font-size: 18px;
     color: var(--ink);
     margin: 0 0 6px;
 }
@@ -214,8 +219,8 @@ defineProps({
 }
 
 .staff-photo {
-    width: 84px;
-    height: 84px;
+    width: 120px;
+    height: 120px;
     border-radius: 50%;
     object-fit: cover;
     border: 3px solid var(--green-100);
@@ -225,18 +230,18 @@ defineProps({
 .staff-name {
     font-family: var(--font-display);
     font-weight: 600;
-    font-size: 16px;
+    font-size: 20px;
     color: var(--ink);
 }
 
 .staff-role {
-    font-size: 13.5px;
+    font-size: 18px;
     color: var(--ink-muted);
-    margin: 2px 0 16px;
+    margin: 12px;
 }
 
 .staff-email {
-    font-size: 13px;
+    font-size: 17px;
     word-break: break-all;
 }
 </style>

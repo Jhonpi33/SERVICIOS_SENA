@@ -11,7 +11,7 @@
     ]"
     :telefonos="['+57 317 637 7670']"
     :encargado="{
-      foto: 'https://ui-avatars.com/api/?name=Maria+Delia+Arenas&background=39A900&color=fff&size=256',
+      foto: '/public/images/perfil-bienestar.png',
       nombre: 'María Delia Arenas Mejía',
       cargo: 'Líder de Bienestar al Aprendiz',
       correo: 'mdarenas@sena.edu.com'

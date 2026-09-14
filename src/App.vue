@@ -9,23 +9,13 @@
           <img src="/images/logo-sena.png" alt="Logo SENA" class="brand-logo" />
           <span class="brand-name">Servicios al Aprendiz</span>
         </router-link>
-
         <q-space />
-
-        <q-tabs align="right" class="app-tabs gt-sm">
-          <q-route-tab to="/" label="Inicio" />
-          <q-route-tab to="/enfermeriaView" label="Enfermería" />
-          <q-route-tab to="/bienestarView" label="Bienestar" />
-          <q-route-tab to="/bibliotecaView" label="Biblioteca" />
-          <q-route-tab to="/cafeteriaView" label="Cafetería" />
-          <q-route-tab to="/coordinacionView" label="Coordinación" />
-          <q-route-tab to="/acercaView" label="Acerca de" />
-        </q-tabs>
       </q-toolbar>
     </q-header>
 
+<!--panel laterar-->
     <q-drawer v-model="leftDrawerOpen" side="left" behavior="mobile" bordered>
-      <q-list padding>
+      <q-list padding class="color_items">
         <q-item clickable v-ripple to="/" exact @click="leftDrawerOpen = false">
           <q-item-section avatar><q-icon name="home" /></q-item-section>
           <q-item-section>Inicio</q-item-section>
@@ -89,7 +79,6 @@ function toggleLeftDrawer () {
 .app-toolbar {
   max-width: 1180px;
   width: 100%;
-  margin: 0 auto;
   padding: 0 clamp(16px, 4vw, 40px);
 }
 
@@ -147,5 +136,9 @@ function toggleLeftDrawer () {
   font-size: 13px;
   color: rgba(255, 255, 255, 0.75);
   min-height: 44px;
+}
+.color_items{
+  color: var(--green-700);
+  
 }
 </style>

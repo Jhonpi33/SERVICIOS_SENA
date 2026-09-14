@@ -30,10 +30,10 @@ h1, h2, h3, h4 {
   margin: 0;
 }
 
-/* Etiqueta pequeña usada como encabezado de sección (sin mayúsculas sostenidas) */
+
 .section-label {
   font-family: var(--font-display);
-  font-size: 15px;
+  font-size: 40px;
   font-weight: 600;
   color: var(--green-700);
   margin: 0 0 12px;
