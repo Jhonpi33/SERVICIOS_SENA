@@ -2,7 +2,7 @@
   <q-page class="about-page">
 
     <section class="about-block">
-      <h2 class="section-label" id="Titulo">Acerca del centro</h2>
+      <h2 class="section-label section-title-big">Acerca del centro</h2>
       <div class="center-header">
         <img src="/images/logo-sena.png" alt="Logo SENA" class="center-logo" />
         <div>
@@ -49,7 +49,7 @@ const equipo = [
   {
     nombre: 'Jhon Alexander',
     rol: 'Desarrollador Full Stack',
-    foto: '/public/images/Perfil_Jhon_Pimiento.png',
+    foto: '/images/Perfil_Jhon_Pimiento.png',
     github: 'https://github.com/Jhonpi33'
   }
 ]
@@ -135,11 +135,12 @@ const equipo = [
 }
 
 .team-role {
-  font-size: 15px;
+  font-size: 16px;
   color: var(--ink-muted);
   margin: 2px 0 14px;
 }
-#Titulo{
-  font-size: 40px;
+
+.section-title-big {
+  font-size: 34px;
 }
 </style>

@@ -3,6 +3,7 @@
 
     <q-header elevated class="app-header">
       <q-toolbar class="app-toolbar">
+
         <q-btn dense flat round icon="menu" @click="toggleLeftDrawer" class="menu-btn gt-sm-hide" />
 
         <router-link to="/" class="brand">
@@ -51,17 +52,21 @@
       <router-view />
     </q-page-container>
 
-    <q-footer elevated class="app-footer">
+    <footer elevated class="app-footer" >
       <q-toolbar class="footer-toolbar">
         SENA · Bienestar al Aprendiz
       </q-toolbar>
-    </q-footer>
+    </footer>
+
+    <Mascota />
+
 
   </q-layout>
 </template>
 
 <script setup>
 import { ref } from 'vue'
+import Mascota from './components/Mascota.vue'
 
 const leftDrawerOpen = ref(false)
 function toggleLeftDrawer () {
@@ -82,6 +87,11 @@ function toggleLeftDrawer () {
   padding: 0 clamp(16px, 4vw, 40px);
 }
 
+.brand-logo-right {
+  width: 38px;
+  height: 38px;
+  object-fit: contain;
+}
 .brand {
   display: flex;
   align-items: center;
@@ -124,7 +134,7 @@ function toggleLeftDrawer () {
 }
 
 .app-footer {
-  background: var(--ink);
+  background: var(--green-700);
   color: var(--white);
 }
 
@@ -135,7 +145,8 @@ function toggleLeftDrawer () {
   justify-content: center;
   font-size: 13px;
   color: rgba(255, 255, 255, 0.75);
-  min-height: 44px;
+  min-height: 59px;
+  
 }
 .color_items{
   color: var(--green-700);

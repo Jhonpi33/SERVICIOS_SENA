@@ -2,44 +2,47 @@
   <q-page class="home-page">
 
     <!-- ============ HERO: chip + título + subtítulo + buscador + filtros ============ -->
-    <section class="hero">
-      <p class="eyebrow" id="servicos">Servicios al aprendiz</p>
-
-      <h1 class="hero-title">
-        Todo lo que necesitas saber, <span class="highlight">en un solo lugar</span>
-      </h1>
-
-      <p class="hero-subtitle">
-        Consulta qué ofrece cada servicio del centro, sus horarios de atención,
-        el teléfono de contacto y quién te atiende.
-      </p>
-
-      <q-input
-        v-model="busqueda"
-        outlined
-        dense
-        class="search-input"
-        placeholder="¿Qué servicio o trámite buscas? (ej. enfermería, biblioteca...)"
+  
+<section class="hero">
+  <div class="hero-content">
+    <p class="eyebrow" id="servicos">Servicios al aprendiz</p>
+    <h1 class="hero-title">
+      Todo lo que necesitas saber, <span class="highlight">en un solo lugar</span>
+    </h1>
+    <p class="hero-subtitle">
+      Consulta qué ofrece cada servicio del centro, sus horarios de atención,
+      el teléfono de contacto y quién te atiende.
+    </p>
+    <q-input
+      v-model="busqueda"
+      outlined
+      dense
+      class="search-input"
+      placeholder="¿Qué servicio o trámite buscas? (ej. enfermería, biblioteca...)"
+    >
+      <template #prepend>
+        <q-icon name="search" />
+      </template>
+    </q-input>
+    <div class="filter-row">
+      <q-chip
+        v-for="cat in categorias"
+        :key="cat"
+        clickable
+        :outline="filtroActivo !== cat"
+        :color="filtroActivo === cat ? 'primary' : undefined"
+        :text-color="filtroActivo === cat ? 'white' : undefined"
+        @click="filtroActivo = cat"
       >
-        <template #prepend>
-          <q-icon name="search" />
-        </template>
-      </q-input>
-
-      <div class="filter-row">
-        <q-chip
-          v-for="cat in categorias"
-          :key="cat"
-          clickable
-          :outline="filtroActivo !== cat"
-          :color="filtroActivo === cat ? 'primary' : undefined"
-          :text-color="filtroActivo === cat ? 'white' : undefined"
-          @click="filtroActivo = cat"
-        >
-          {{ cat }}
-        </q-chip>
-      </div>
-    </section>
+        {{ cat }}
+      </q-chip>
+    </div>
+  </div>
+  <div class="logo_inicio">
+    <img src="/images/logo-sena.png" alt="Logo SENA" />
+  </div>
+</section>
+  
 
     <!-- ============ DIRECTORIO: grilla de tarjetas de servicio ============ -->
     <section class="directory">
@@ -66,6 +69,7 @@
               {{ s.estado.texto }}
             </span>
           </div>
+          
 
           <div class="card-body">
             <div class="card-tag">{{ s.categoria }}</div>
@@ -216,6 +220,15 @@ const serviciosFiltrados = computed(() => {
 </script>
 
 <style scoped>
+/* .logo_hero{
+  display: grid;
+  grid-template-columns: 2fr, 2fr;
+}
+.logo_inicio{
+  width: 450px;
+  height: 400px;
+  background-image: url("/public/images/logo-sena.png");
+} */
 .home-page {
   max-width: 1180px;
   margin: 0 auto;
@@ -223,9 +236,44 @@ const serviciosFiltrados = computed(() => {
 }
 
 /* ---------- Hero ---------- */
+/* CAMBIO: el hero ahora se divide en contenido izquierdo y logo derecho */
 .hero {
-  max-width: 680px;
+  max-width: none;
   margin-bottom: 40px;
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) 360px;
+  gap: 50px;
+  align-items: center;
+}
+.hero-content {
+  min-width: 0;
+}
+.logo_inicio {
+  width: 100%;
+  height: 360px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.logo_inicio img {
+  width: 300px;
+  height: 300px;
+  object-fit: contain;
+  display: block;
+}
+@media (max-width: 768px) {
+  .hero {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+  .logo_inicio {
+    height: 220px;
+    order: -1;
+  }
+  .logo_inicio img {
+    width: 190px;
+    height: 190px;
+  }
 }
 
 .welcome-chip {

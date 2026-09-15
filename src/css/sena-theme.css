@@ -1,21 +1,32 @@
+/* ============================================================
+   Tema visual — Servicios al Aprendiz (SENA)
+   Paleta: verde institucional + tinta cálida, tipografía Sora/Inter
+   ============================================================ */
 
 @import url('https://fonts.googleapis.com/css2?family=Sora:wght@500;600;700&family=Inter:wght@400;500;600&display=swap');
 
 :root {
-  /* color */
-  --green-700: #1F5C29;
-  --green-600: #2F8F3B;
-  --green-500: #39A900;
-  --green-100: #E7F5E8;
-  --ink: #16241B;
-  --ink-muted: #5B6B5F;
-  --paper: #F6F8F4;
-  --card-border: #E1E6DD;
-  --white: #FFFFFF;
+    /* CAMBIO: paleta verde más uniforme en toda la interfaz */
+    --green-800: #14532D;
+    --green-700: #166534;
+    --green-600: #2E7D32;
+    --green-500: #39A900;
+    --green-100: #EAF5E8;
 
-  /* type */
-  --font-display: 'Sora', system-ui, sans-serif;
-  --font-body: 'Inter', system-ui, sans-serif;
+    /* CAMBIO: neutros con un ligero tono verdoso */
+    --ink: #183024;
+    --ink-muted: #617268;
+    --paper: #F7F9F6;
+    --card-border: #DCE5DC;
+    --white: #FFFFFF;
+
+    /* CAMBIO: colores de emergencia centralizados */
+    --danger-700: #B3261E;
+    --danger-200: #EBC7C3;
+    --danger-100: #F9EDEC;
+
+    --font-display: 'Sora', system-ui, sans-serif;
+    --font-body: 'Inter', system-ui, sans-serif;
 }
 
 body {
@@ -30,10 +41,10 @@ h1, h2, h3, h4 {
   margin: 0;
 }
 
-
+/* Etiqueta pequeña usada como encabezado de sección (sin mayúsculas sostenidas) */
 .section-label {
   font-family: var(--font-display);
-  font-size: 40px;
+  font-size: 15px;
   font-weight: 600;
   color: var(--green-700);
   margin: 0 0 12px;
