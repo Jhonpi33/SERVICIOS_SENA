@@ -19,6 +19,6 @@ export default defineConfig({
     })
   ],
 
-  // Base necesaria para desplegar en GitHub Pages (jhonpi33.github.io/SERVICIOS_SENA/)
-  base: '/SERVICIOS_SENA/'
+  // La base por defecto es '/' (Render, dominio propio).
+  // Para GitHub Pages se pasa con: npm run deploy (usa --base=/SERVICIOS_SENA/)
 })

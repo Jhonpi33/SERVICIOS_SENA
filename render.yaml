@@ -1,0 +1,12 @@
+# Blueprint de Render: sitio estático (SPA Vue/Quasar)
+services:
+  - type: web
+    name: servicios-sena
+    runtime: static
+    buildCommand: npm install && npm run build
+    staticPublishPath: dist
+    # SPA fallback: /servicio/enfermeria... debe servir index.html
+    routes:
+      - type: rewrite
+        source: /*
+        destination: /index.html
