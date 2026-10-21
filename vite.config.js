@@ -17,5 +17,8 @@ export default defineConfig({
     quasar({
       sassVariables: join(import.meta.dirname, 'src/quasar-variables.sass')
     })
-  ]
+  ],
+
+  // Base necesaria para desplegar en GitHub Pages (jhonpi33.github.io/SERVICIOS_SENA/)
+  base: '/SERVICIOS_SENA/'
 })

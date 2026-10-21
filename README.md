@@ -1,5 +1,31 @@
-# Vue 3 + Vite
+# 📋 Servicios SENA
 
-This template should help get you started developing with Vue 3 in Vite. The template uses Vue 3 `<script setup>` SFCs, check out the [script setup docs](https://v3.vuejs.org/api/sfc-script-setup.html#sfc-script-setup) to learn more.
+Directorio web de los servicios del centro de formación. Reúne en un solo lugar las dependencias con las que cuenta el centro — **Enfermería, Bienestar al Aprendiz, Biblioteca, Cafetería y Coordinación Académica** — con su horario de atención, encargado y ubicación.
 
-Learn more about IDE Support for Vue in the [Vue Docs Scaling up Guide](https://vuejs.org/guide/scaling-up/tooling.html#ide-support).
+Cada servicio tiene su propia **ficha de detalle** (qué ofrece, a quién va dirigido y cómo contactarlo). En la página de inicio hay un **buscador con filtros por categoría** (Abiertos ahora, Salud & Apoyo, Académico, etc.) para encontrar rápidamente el servicio que necesitas.
+
+## Stack
+
+- **Vue 3** (`<script setup>`) + **Vite**
+- **Quasar** (componentes de interfaz) con tema personalizado (`src/css/sena-theme.css`)
+- **Vue Router** (vista por cada dependencia)
+
+## Instalación y ejecución
+
+```bash
+npm install
+npm run dev      # servidor de desarrollo
+npm run build    # build de producción en dist/
+npm run preview  # previsualizar el build
+```
+
+## Despliegue
+
+El proyecto está publicado en GitHub Pages:
+**https://jhonpi33.github.io/SERVICIOS_SENA/**
+
+`vite.config.js` define `base: '/SERVICIOS_SENA/'` (requerido por GitHub Pages). El script de despliegue usa `gh-pages`:
+
+```bash
+npm run deploy
+```

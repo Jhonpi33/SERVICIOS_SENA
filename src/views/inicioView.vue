@@ -132,7 +132,7 @@ const busqueda = ref('')
 const filtroActivo = ref('Todos')
 
 // Datos reales de cada servicio.
-// TODO: reemplaza 'ubicacion' por la ubicación real (edificio/piso) de cada dependencia.
+// Las ubicaciones coinciden con las que usa cada vista de detalle del proyecto.
 const servicios = [
   {
     title: 'Enfermería',
@@ -141,7 +141,7 @@ const servicios = [
     banner: '/images/fachada-enfermeria.jpg',
     categoria: 'Salud & Apoyo',
     resumen: 'Promoción y prevención de enfermedades, atención básica en primeros auxilios para los aprendices del centro.',
-    ubicacion: 'Por definir',
+    ubicacion: 'Edificio A · Primer piso',
     encargadoLabel: 'Encargada',
     encargado: 'María Fernanda Gómez',
     footerLeft: 'Tel: 321 415 3995',
@@ -155,7 +155,7 @@ const servicios = [
     banner: '/images/fachada-bienestar.jpg',
     categoria: 'Apoyos, Bienestar y Psicosocial',
     resumen: 'Apoyos socioeconómicos, monitorías, salud física y mental, y fortalecimiento del liderazgo estudiantil.',
-    ubicacion: 'Por definir',
+    ubicacion: 'Edificio A · Primer piso',
     encargadoLabel: 'Líder',
     encargado: 'María Delia Arenas',
     footerLeft: 'Tel: 317 637 7670',
@@ -169,7 +169,7 @@ const servicios = [
     banner: '/images/fachada-biblioteca.png',
     categoria: 'Recursos Académicos',
     resumen: 'Consulta en sala, préstamo a domicilio, préstamo interbibliotecario, talleres y asesorías de búsqueda.',
-    ubicacion: 'Por definir',
+    ubicacion: 'Bloque académico',
     encargadoLabel: 'Bibliotecóloga',
     encargado: 'Yudith Milagros Martínez',
     footerLeft: 'Tel: 312 584 8032',
@@ -183,7 +183,7 @@ const servicios = [
     banner: '/images/fachada-cafeteria.jpg',
     categoria: 'Alimentación y Cafetería',
     resumen: 'Venta y atención al cliente del servicio de alimentación para aprendices, instructores y funcionarios.',
-    ubicacion: 'Por definir',
+    ubicacion: 'Zona de Cafetería · Esquina del domo',
     encargadoLabel: 'Coordinadora',
     encargado: 'Luisa Carreño',
     footerLeft: 'Ficha cocina: 341 0173',
@@ -197,7 +197,7 @@ const servicios = [
     banner: '/images/fachada-coordinacion.jpg',
     categoria: 'Trámites Curriculares',
     resumen: 'Novedades de aprendices, retiros, aplazamientos y logística de ambientes para la formación.',
-    ubicacion: 'Por definir',
+    ubicacion: 'Bloque Administrativo',
     encargadoLabel: 'Coordinador',
     encargado: 'Luis Carlos Reina',
     footerLeft: 'Tel: 316 6783027',
